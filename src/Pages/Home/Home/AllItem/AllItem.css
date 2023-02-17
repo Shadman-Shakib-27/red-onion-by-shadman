@@ -1,0 +1,7 @@
+.single-item {
+  height: 360px;
+  width: 300px;
+  border: 1px solid red;
+  margin: auto;
+  border-radius: 20px;
+}

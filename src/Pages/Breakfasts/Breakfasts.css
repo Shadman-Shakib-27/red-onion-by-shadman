@@ -1,0 +1,14 @@
+.breakfast-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 576px) {
+  .breakfast-section {
+    display: flex;
+    flex-direction: column;
+  }
+}

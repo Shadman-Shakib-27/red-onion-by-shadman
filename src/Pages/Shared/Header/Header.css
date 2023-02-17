@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.header img {
+  height: 50px;
+}
+#Link1 {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  margin-right: 50px;
+}
+#Link2 {
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  padding: 7px;
+  padding-right: 25px;
+  padding-left: 25px;
+  font-weight: 500;
+  border-radius: 50px;
+}
+/* Responsive */
+@media only screen and (max-width: 576px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    width: 100;
+  }
+  nav div {
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+}
