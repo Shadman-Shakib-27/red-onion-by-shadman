@@ -6,12 +6,12 @@ import "./Header.css";
 const Header = () => {
   return (
     <nav className="header">
-      <img src={logo} alt="" />
+      <img src={logo} as={Link} to="/" alt="" />
       <div>
         <Link id="Link1" to="/Login">
           Login
         </Link>
-        <Link id="Link2" to="/Sign Up">
+        <Link id="Link2" to="/SignUp">
           Sign Up
         </Link>
       </div>

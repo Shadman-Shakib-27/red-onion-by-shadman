@@ -5,6 +5,7 @@ import Home from "./Pages/Home/Home/Home";
 import Breakfasts from "./Pages/Breakfasts/Breakfasts";
 import Lunchs from "./Pages/Lunchs/Lunchs";
 import Dinners from "./Pages/Dinners/Dinners";
+import SignUp from "./Pages/SignUp/SignUp";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/Breakfasts" element={<Breakfasts></Breakfasts>}></Route>
         <Route path="/Lunchs" element={<Lunchs></Lunchs>}></Route>
         <Route path="/Dinners" element={<Dinners></Dinners>}></Route>
+        <Route path="/SignUp" element={<SignUp></SignUp>}></Route>
       </Routes>
     </div>
   );
