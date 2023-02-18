@@ -5,6 +5,7 @@ import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const SignUp = () => {
   const nameRef = useRef("");
@@ -31,22 +32,23 @@ const SignUp = () => {
     <div className="SignUp">
       <img className="mt-5 mb-4  " src={logo} alt="" />
       <h2 className="text-dark fw-bold">Please Sign Up</h2>
+
       <Form onSubmit={handleSubmit} className="w-25 mb-4 mx-auto mt-4">
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3 name-field " controlId="formBasicEmail">
           <Form.Control ref={nameRef} type="text" placeholder="Name" />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3 name-field" controlId="formBasicEmail">
           <Form.Control ref={emailRef} type="email" placeholder="Email" />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Group className="mb-3 name-field" controlId="formBasicPassword">
           <Form.Control
             ref={passwordRef}
             type="password"
             placeholder="Password"
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Group className="mb-3 name-field" controlId="formBasicPassword">
           <Form.Control
             ref={confirmPasswordRef}
             type="password"
@@ -58,12 +60,14 @@ const SignUp = () => {
           Sign Up
         </Button>
       </Form>
+
       <Link
         className="pe-auto fw-bold text-decoration-none text-danger"
         to="/Logins"
       >
         Already have an account?
       </Link>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };

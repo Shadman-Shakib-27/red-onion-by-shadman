@@ -16,10 +16,19 @@
 
 @media only screen and (max-width: 576px) {
   .SignUp {
-    height: 800px;
+    height: 900px;
     background-position: center center;
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .SignUp img {
+    height: 60px;
+  }
+  .SignUp .name-field {
+    width: 100%;
+  }
+  .SignUp .button {
+    width: 100%;
   }
 }

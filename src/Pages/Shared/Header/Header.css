@@ -37,4 +37,13 @@
     margin-top: 30px;
     margin-left: 20px;
   }
+  /* Display Block Korle Niche Niche Ase. */
+  #Link1{
+    display: block;
+    margin-left: 45px;
+    margin-bottom: 5px;
+  }
+  #Link2{
+    display: block;
+  }
 }
