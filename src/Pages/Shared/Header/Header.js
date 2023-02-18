@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
 import logo from "../../../images/logo2.png";
 import "./Header.css";
@@ -22,8 +22,9 @@ const Header = () => {
         <Link id="Link1" to="/Logins">
           Login
         </Link>
+        {/* Conditional Rendering */}
         {user ? (
-          <button onClick={logOut} id="Link2" className="btn btn-danger">
+          <button onClick={logOut} className="btn btn-danger">
             Sign Out
           </button>
         ) : (
