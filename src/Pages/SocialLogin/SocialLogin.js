@@ -3,14 +3,19 @@ import "./SocialLogin.css";
 import google from "../../button/google.png";
 import fb from "../../button/Fb.png";
 import github from "../../button/github.png";
-import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import {
+  useSignInWithGithub,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { useNavigate } from "react-router-dom";
 
 const SocialLogin = () => {
   const navigate = useNavigate();
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-  if (user) {
+  const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
+  console.log(signInWithGithub, user1);
+  if (user || user1) {
     navigate("/");
   }
   return (
@@ -48,7 +53,10 @@ const SocialLogin = () => {
           />
           Facebook Sign In
         </button>
-        <button className="w-25 btn btn-danger mx-auto d-block">
+        <button
+          onClick={() => signInWithGithub()}
+          className="w-25 btn btn-danger mx-auto d-block"
+        >
           <img
             style={{ height: "20px" }}
             className="rounded mx-1"
