@@ -4,6 +4,7 @@ import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import logo from "../../images/logo2.png";
+import PageTitle from "../Shared/PageTitle/PageTitle";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Logins = () => {
@@ -26,6 +27,7 @@ const Logins = () => {
   }
   return (
     <div className="SignUp">
+      <PageTitle title="Login"></PageTitle>
       <img className="mt-5 mb-4" src={logo} alt="" />
       <h2 className="text-dark fw-bold ">Please Login</h2>
       <Form onSubmit={handleLogin} className="w-25 mb-4 mx-auto mt-4">

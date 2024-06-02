@@ -2,48 +2,78 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
-  margin-left: 50px;
-  margin-right: 50px;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.header img {
-  height: 50px;
+
+.logo {
+  height: 40px;
 }
-#Link1 {
+
+.menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.menu a,
+.menu button {
   text-decoration: none;
   color: black;
-  font-weight: 500;
-  margin-right: 50px;
+  font-size: 16px;
 }
-#Link2 {
-  text-decoration: none;
-  color: white;
-  background-color: red;
-  padding: 7px;
-  padding-right: 25px;
-  padding-left: 25px;
-  font-weight: 500;
-  border-radius: 50px;
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
-/* Responsive */
-@media only screen and (max-width: 576px) {
-  .header {
-    display: flex;
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     flex-direction: column;
-    margin-bottom: 50px;
-    width: 100;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 8px;
   }
-  nav div {
-    margin-top: 30px;
-    margin-left: 20px;
+
+  .menu.open {
+    display: flex;
   }
-  /* Display Block Korle Niche Niche Ase. */
-  #Link1{
-    display: block;
-    margin-left: 45px;
-    margin-bottom: 5px;
-  }
-  #Link2{
+
+  .hamburger {
     display: block;
   }
+}
+
+@media (min-width: 769px) {
+  .menu {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+#Link1,
+#Link2 {
+  color: inherit;
+  text-decoration: none;
+}
+
+.buttn {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
 }

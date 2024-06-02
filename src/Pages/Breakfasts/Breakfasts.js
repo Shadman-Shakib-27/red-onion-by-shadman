@@ -12,7 +12,9 @@ const Breakfasts = () => {
   }, []);
   return (
     <div>
-      <h2 className="bg-danger text-light p-3">This is Only Breakfast Section</h2>
+      <h2 className="bg-danger text-light p-3">
+        This is Only Breakfast Section
+      </h2>
       <div className="breakfast-section">
         {breakfasts.map((breakfast) => (
           <Breakfast key={breakfast.id} breakfast={breakfast}></Breakfast>
